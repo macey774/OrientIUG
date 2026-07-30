@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Hub IUG – Édition Communautaire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- SPLASH -->
+  <div id="splash-screen" class="splash-screen">
+    <div class="splash-content">
+      <div class="cube-group">
+        <div class="cube cube-bottom-left"></div>
+        <div class="cube cube-bottom-right"></div>
+        <div class="cube cube-top"></div>
+      </div>
+      <div class="splash-text hidden">Hub IUG</div>
+    </div>
+  </div>
+
+  <div class="blur-top-gap"></div>
+
+  <!-- HUBAR -->
+  <div class="hubar">
+    <div class="hubar-left">
+      <span id="back-button" class="back-button hidden"><i class="fas fa-arrow-left"></i></span>
+      <div class="logo-area" id="header-logo">
+        <i class="fas fa-cubes" id="header-icon"></i>
+        <h1 id="header-title">Hub IUG</h1>
+      </div>
+    </div>
+    <div class="hubar-right">
+      <div id="hub-actions" class="hub-actions">
+        <button id="themeToggle" class="icon-btn"><i class="fas fa-sun"></i></button>
+        <button id="langToggle" class="icon-btn"><i class="fas fa-language"></i></button>
+        <button id="loginBtn" class="icon-btn"><i class="fas fa-user-circle"></i></button>
+        <button id="menuToggle" class="icon-btn burger"><i class="fas fa-bars"></i></button>
+      </div>
+      <div id="chat-actions" class="chat-actions hidden">
+        <button id="voice-call-btn" class="icon-btn"><i class="fas fa-phone"></i></button>
+        <button id="three-dots-btn" class="icon-btn"><i class="fas fa-ellipsis-vertical"></i></button>
+        <button id="loginBtnChat" class="icon-btn"><i class="fas fa-user-circle"></i></button>
+        <button id="menuToggleChat" class="icon-btn burger"><i class="fas fa-bars"></i></button>
+      </div>
+      <div id="inscription-actions" class="inscription-actions hidden">
+        <button id="clear-form-btn" class="icon-btn"><i class="fas fa-eraser"></i></button>
+        <button id="download-form-btn" class="icon-btn"><i class="fas fa-download"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU MOBILE -->
+  <nav id="mobileMenu" class="mobile-menu hidden">
+    <ul>
+      <li><a href="#" id="mobileThemeToggle"><i class="fas fa-sun"></i> Mode clair/sombre</a></li>
+      <li><a href="#" id="mobileLangToggle"><i class="fas fa-language"></i> English</a></li>
+      <li><a href="#" id="mobileLogin"><i class="fas fa-sign-in-alt"></i> Connexion</a></li>
+      <li><a href="#" id="mobileAbout"><i class="fas fa-info-circle"></i> À propos</a></li>
+      <li><a href="#" id="mobileFaq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- SECTION HUB -->
+    <div id="hub-section">
+      <header>
+        <div class="news-ticker">
+          <div class="ticker-content">
+            <span>📢 Nouveau : Tutoriels vidéo disponibles pour BusEye et Cerise !</span>
+            <span>⭐ OrientIUG fête ses 1 an cette semaine</span>
+            <span>📚 Banque d'annales : plus de 500 sujets ajoutés</span>
+          </div>
+        </div>
+        <p class="subtitle">Votre boîte à outils étudiante, réinventée.</p>
+        <div class="header-decoration"></div>
+      </header>
+
+      <div class="projects-grid">
+        <!-- BusEye -->
+        <div class="card" data-url="#">
+          <div class="card-badges"><span class="badge popular">Populaire</span></div>
+          <div class="icon-wrapper" style="background: linear-gradient(135deg, #FF8C42, #FF5714);"><i class="fas fa-bus"></i></div>
+          <h2>BusEye</h2>
+          <p>Suivez les bus en temps réel, horaires et itinéraires.</p>
+          <div class="card-footer">
+            <button class="btn">Accéder <i class="fas fa-arrow-right"></i></button>
+            <button class="video-tutoriel" data-video="https://www.youtube.com/watch?v=..."><i class="fas fa-play-circle"></i></button>
+          </div>
+        </div>
+        <!-- Banque d'Annales -->
+        <div class="card" data-url="#">
+          <div class="card-badges"><span class="badge new">Nouveau</span></div>
+          <div class="icon-wrapper" style="background: linear-gradient(135deg, #4A90E2, #2C5F9A);"><span class="emoji-icon">📚</span></div>
+          <h2>Banque d'Annales IUG</h2>
+          <p>Annales des examens, filtrage par matière.</p>
+          <div class="card-footer">
+            <button class="btn">Accéder <i class="fas fa-arrow-right"></i></button>
+            <button class="video-tutoriel" data-video="https://www.youtube.com/watch=..."><i class="fas fa-play-circle"></i></button>
+          </div>
+        </div>
+        <!-- Cerise -->
+        <div class="card" data-url="#">
+          <div class="card-badges"></div>
+          <div class="icon-wrapper" style="background: linear-gradient(135deg, #E94E3A, #B33C2E);"><span class="emoji-icon">😉</span></div>
+          <h2>Cerise</h2>
+          <p>Assistante virtuelle pour la vie universitaire.</p>
+          <div class="card-footer">
+            <button class="btn">Accéder <i class="fas fa-arrow-right"></i></button>
+            <button class="video-tutoriel" data-video="https://www.youtube.com/watch=..."><i class="fas fa-play-circle"></i></button>
+          </div>
+        </div>
+        <!-- OrientIUG -->
+        <div class="card" id="orientiug-card">
+          <div class="card-badges"></div>
+          <div class="icon-wrapper" style="background: linear-gradient(135deg, #6C5B7B, #4A3A5A);"><i class="fas fa-compass"></i></div>
+          <h2>OrientIUG</h2>
+          <p>Orientation personnalisée et conseils parcours.</p>
+          <div class="card-footer">
+            <button class="btn" id="orientiug-access">Accéder <i class="fas fa-arrow-right"></i></button>
+            <button class="video-tutoriel" data-video="https://www.youtube.com/watch=..."><i class="fas fa-play-circle"></i></button>
+          </div>
+        </div>
+        <!-- Wall of Success -->
+        <div class="card" id="wallofsuccess-card">
+          <div class="card-badges"><span class="badge new">Nouveau</span></div>
+          <div class="icon-wrapper" style="background: linear-gradient(135deg, #2E8B57, #1F6E43);"><i class="fas fa-trophy"></i></div>
+          <h2>Wall of Success</h2>
+          <p>Valorisation de l'excellence académique.</p>
+          <div class="card-footer">
+            <button class="btn" id="wallofsuccess-access">Accéder <i class="fas fa-arrow-right"></i></button>
+            <button class="video-tutoriel" data-video="https://www.youtube.com/watch=..."><i class="fas fa-play-circle"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <section class="recommendations">
+        <h2>Recommandé pour vous</h2>
+        <div class="rec-cards">
+          <div class="rec-card"><i class="fas fa-graduation-cap"></i><span>Préparez vos partiels avec la Banque d'annales</span></div>
+          <div class="rec-card"><i class="fas fa-map-signs"></i><span>Découvrez les parcours avec OrientIUG</span></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- SECTION ORIENTIUG -->
+    <div id="orientiug-section" class="hidden">
+      <div id="orientiug-presentation" class="orientiug-presentation">
+        <div class="presentation-content">
+          <p class="presentation-intro">OrientIUG, votre boussole pour un avenir brillant. Que vous soyez en quête de sens, de débouchés ou d'inspiration, notre assistant vous éclaire sur les parcours qui ont fait leurs preuves.</p>
+          <h3>Ils ont réussi, et vous aussi !</h3>
+          <div class="success-stories">
+            <div class="story-card">
+              <div class="story-avatar"></div>
+              <div class="story-text">
+                <strong>Mabel Cédric Yvan</strong>
+                <em>Étudiant à l'IUG</em>
+                <p class="story-parcours">Diplômé de l'ESG, j'ai poursuivi avec un Master en Management, un Doctorat. Mon parcours montre qu'avec de la détermination, tout est possible !</p>
+                <p class="story-quote">"L'IUG a été le tremplin de ma carrière. Chaque étudiant a le potentiel de devenir un leader."</p>
+              </div>
+            </div>
+            <div class="story-card">
+              <div class="story-avatar"></div>
+              <div class="story-text">
+                <strong>Dr. Michel</strong>
+                <em>Directeur</em>
+                <p class="story-parcours">Formé à l'ISTA, je suis devenu Ingénieur en Data Science, puis Directeur. La technologie est mon moteur, et l'IUG m'a donné les ailes pour innover.</p>
+                <p class="story-quote">"Les métiers du numérique évoluent vite, mais l'excellence de l'enseignement à l'IUG reste une constante."</p>
+              </div>
+            </div>
+          </div>
+          <div class="motivation-block">
+            <p class="motivation-text">Le succès n'est pas un hasard, c'est une construction. À l'IUG, nous croyons en chaque talent.</p>
+            <p class="motivation-cta">Prêt à tracer votre route ?</p>
+          </div>
+          <div class="presentation-footer">
+            <button id="go-to-chat" class="btn-primary">Trouver ma voix <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat plein écran -->
+      <div id="orientiug-chat-fullscreen" class="orientiug-chat-fullscreen hidden">
+        <div class="chat-fullscreen-messages" id="chat-fullscreen-messages" aria-live="polite"></div>
+        <div class="chat-fullscreen-input-area">
+          <div class="input-wrapper">
+            <button class="emoji-sticker-btn" id="emoji-sticker-btn"><i class="fas fa-smile-wink"></i></button>
+            <textarea id="chat-fullscreen-input" rows="1" placeholder="Écrire un message..."></textarea>
+            <div class="input-buttons">
+              <button class="camera-btn" id="camera-btn"><i class="fas fa-camera"></i></button>
+              <button class="attach-doc-btn" id="attach-doc-btn"><i class="fas fa-paperclip"></i></button>
+            </div>
+          </div>
+          <button id="send-voice-btn" class="send-voice-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+
+        <!-- Toolbar pièces jointes -->
+        <div class="chat-toolbar hidden" id="chat-toolbar">
+          <button><i class="fas fa-image"></i> Galerie</button>
+          <button><i class="fas fa-camera"></i> Appareil photo</button>
+          <button><i class="fas fa-file"></i> Document</button>
+          <button><i class="fas fa-location-dot"></i> Localisation</button>
+          <button><i class="fas fa-user"></i> Contact</button>
+        </div>
+
+        <!-- Emoji picker -->
+        <div id="emoji-picker" class="emoji-picker hidden">
+          <div class="emoji-picker-header"><span>Émojis</span></div>
+          <div class="emoji-picker-content">
+            <div class="emoji-category" id="recent-category" style="display: none;">
+              <h4>📌 Récemment utilisés</h4>
+              <div class="emoji-grid" id="recent-grid"></div>
+            </div>
+            <div class="emoji-category">
+              <h4>😀 Smileys</h4>
+              <div class="emoji-grid">
+                <span class="emoji-option">😀</span><span class="emoji-option">😃</span><span class="emoji-option">😄</span>
+                <span class="emoji-option">😁</span><span class="emoji-option">😆</span><span class="emoji-option">😅</span>
+                <span class="emoji-option">😂</span><span class="emoji-option">🤣</span><span class="emoji-option">😊</span>
+              </div>
+            </div>
+            <!-- Autres catégories... -->
+          </div>
+        </div>
+
+        <!-- Menu trois points -->
+        <div id="three-dots-menu" class="three-dots-menu hidden">
+          <ul>
+            <li id="menu-register">📄 Fiche d'inscription</li>
+            <li id="menu-media">📁 Médias, liens et documents</li>
+            <li id="menu-search">🔍 Rechercher</li>
+            <li id="menu-theme">🎨 Thème de la conversation</li>
+            <li id="menu-clear">🗑️ Effacer le contenu</li>
+            <li id="menu-report">⚠️ Signaler</li>
+          </ul>
+        </div>
+
+        <!-- Panneau de recherche -->
+        <div id="search-panel" class="search-panel hidden">
+          <input type="text" id="search-input" placeholder="Rechercher un message...">
+          <button id="search-close">×</button>
+          <div id="search-results-count"></div>
+        </div>
+
+        <!-- Panneau de thème -->
+        <div id="theme-panel" class="theme-panel hidden">
+          <h3>Personnaliser le chat</h3>
+          <div class="color-options">
+            <div class="color-option" data-bg="#f6f9fc" data-bubble="#e5e5ea" data-user-bubble="#3a7ca5">Défaut</div>
+            <div class="color-option" data-bg="#0f172a" data-bubble="#1e293b" data-user-bubble="#2563eb">Sombre</div>
+            <div class="color-option" data-bg="#fff7ed" data-bubble="#fed7aa" data-user-bubble="#ea580c">Chaleureux</div>
+            <div class="color-option" data-bg="#f0fdf4" data-bubble="#bbf7d0" data-user-bubble="#15803d">Nature</div>
+          </div>
+          <button id="theme-reset">Réinitialiser</button>
+          <button id="theme-close">Fermer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION INSCRIPTION -->
+    <div id="inscription-section" class="inscription-section hidden">
+      <div class="inscription-paper">
+        <div class="inscription-header">
+          <div class="inscription-logo">
+            <div class="inscription-logo-icon"><i class="fas fa-university"></i></div>
+            <h2>Institut Universitaire du Golfe de Guinée</h2>
+          </div>
+          <div class="inscription-title">
+            <h1>FICHE D'INSCRIPTION</h1>
+            <h2>Admission Form <span id="academic-year"></span></h2>
+          </div>
+        </div>
+        <form id="inscription-form" class="inscription-form" novalidate>
+          <!-- IDENTITÉ -->
+          <div class="form-row three-cols">
+            <div class="field-group">
+              <label>Nom du candidat <span class="required">*</span><br><small>Candidature's name</small></label>
+              <input type="text" id="nom" placeholder="......" required>
+            </div>
+            <div class="field-group">
+              <label>Prénom <span class="required">*</span><br><small>Surname</small></label>
+              <input type="text" id="prenom" placeholder="......" required>
+            </div>
+            <div class="field-group">
+              <label>Sexe <span class="required">*</span></label>
+              <select id="sexe" required>
+                <option value="">......</option>
+                <option>M</option>
+                <option>F</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row two-cols">
+            <div class="field-group">
+              <label>Date de naissance <span class="required">*</span><br><small>Date of birth</small></label>
+              <input type="date" id="dateNaissance" required>
+            </div>
+            <div class="field-group">
+              <label>Lieu de naissance <br><small>Place of birth</small></label>
+              <input type="text" id="lieuNaissance" placeholder="......">
+            </div>
+          </div>
+
+          <div class="form-row two-cols">
+            <div class="field-group">
+              <label>Nationalité <br><small>Nationality</small></label>
+              <input type="text" id="nationalite" placeholder="......">
+            </div>
+            <div class="field-group">
+              <label>Région d'origine <br><small>Region</small></label>
+              <input type="text" id="regionOrigine" placeholder="......">
+            </div>
+          </div>
+
+          <div class="form-row two-cols">
+            <div class="field-group">
+              <label>Téléphone étudiant <span class="required">*</span><br><small>Student's phone</small></label>
+              <input type="tel" id="student-phone" placeholder="......" required pattern="\d{9}" inputmode="numeric" title="9 chiffres">
+            </div>
+            <div class="field-group">
+              <label>E-mail <span class="required">*</span></label>
+              <input type="email" id="email" placeholder="......" required>
+            </div>
+          </div>
+
+          <div class="form-row two-cols">
+            <div class="field-group">
+              <label>Nature du baccalauréat <br><small>Certificate Obtained</small></label>
+              <input type="text" id="baccalaureat" placeholder="......">
+            </div>
+            <div class="field-group">
+              <label>Année d'obtention <br><small>Year of obtention</small></label>
+              <input type="text" id="graduation-year" placeholder="......" pattern="\d{4}" inputmode="numeric" title="4 chiffres">
+            </div>
+          </div>
+
+          <div class="form-row two-cols">
+            <div class="field-group">
+              <label>Dernier établissement fréquenté <br><small>The last school attended</small></label>
+              <input type="text" id="dernierEtablissement" placeholder="......">
+            </div>
+            <div class="field-group">
+              <label>Classe <br><small>The last class attended</small></label>
+              <input type="text" id="classe" placeholder="......">
+            </div>
+          </div>
+
+          <div class="form-row two-cols">
+            <div class="field-group">
+              <label>Spécialité choisie <span class="required">*</span><br><small>Specialty</small></label>
+              <select id="specialite" required>
+                <option value="">......</option>
+                <option>ESG (Gestion)</option>
+                <option>ISTA (Informatique)</option>
+                <option>ISA (Agronomie)</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label>Jour ☐ Soir ☐ <br><small>Day class &nbsp;&nbsp; Evening class</small></label>
+              <div class="radio-group">
+                <label><input type="radio" name="schedule" value="jour" required> Jour</label>
+                <label><input type="radio" name="schedule" value="soir"> Soir</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- PARENTS / TUTEURS -->
+          <div class="form-row two-cols">
+            <div class="field-group">
+              <label>Nom du père ou tuteur <span class="required">*</span><br><small>Father's names</small></label>
+              <input type="text" id="nomPere" placeholder="......" required>
+            </div>
+            <div class="field-group">
+              <label>Tél. <span class="required">*</span></label>
+              <input type="tel" id="parent-phone" placeholder="......" required pattern="\d{9}" inputmode="numeric" title="9 chiffres">
+            </div>
+          </div>
+          <div class="form-row two-cols">
+            <div class="field-group">
+              <label>Nom de la mère <br><small>Mother's names</small></label>
+              <input type="text" id="nomMere" placeholder="......">
+            </div>
+            <div class="field-group">
+              <label>Tél.</label>
+              <input type="tel" id="mother-phone" placeholder="......" pattern="\d{9}" inputmode="numeric" title="9 chiffres">
+            </div>
+          </div>
+          <div class="form-row two-cols">
+            <div class="field-group">
+              <label>Profession du père</label>
+              <input type="text" id="professionPere" placeholder="......">
+            </div>
+            <div class="field-group">
+              <label>Profession de la mère</label>
+              <input type="text" id="professionMere" placeholder="......">
+            </div>
+          </div>
+
+          <!-- PIÈCES FOURNIES -->
+          <div class="form-section">
+            <h3>Pièces fournies :<br><small>Admission procédures</small></h3>
+            <div class="checklist">
+              <div class="checklist-item">
+                <div class="checklist-fr">Demande d'inscription</div>
+                <div class="checklist-en">Hand written application <span class="checkbox-right"><input type="checkbox"> ☐</span></div>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-fr">Photocopie certifiée du Diplôme</div>
+                <div class="checklist-en">Certified copy of GCE A/L or Bac <span class="checkbox-right"><input type="checkbox"> ☐</span></div>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-fr">Photocopie Certifiée de l'acte de naissance</div>
+                <div class="checklist-en">Certified copy of birth certificate <span class="checkbox-right"><input type="checkbox"> ☐</span></div>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-fr">Visite médicale exigée (5 000 F)</div>
+                <div class="checklist-en">Medical check-up (5 000 thousand F) <span class="checkbox-right"><input type="checkbox"> ☐</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENGAGEMENT -->
+          <div class="form-section">
+            <p class="engagement">Je m’engage à respecter scrupuleusement l’ordre et la discipline conformément aux dispositions du Règlement Intérieur de l’Institut Universitaire du Golfe de Guinée (IUG).<br><em>I’m engaged to respect scrupulously the order and discipline according to all the internal rules and regulation of University Institute of Guinea Gulf.</em></p>
+          </div>
+
+          <!-- SIGNATURE -->
+          <div class="form-row signature-row">
+            <div class="field-group signature-date">
+              <label>Douala, le <input type="text" id="current-date-input" class="date-input" placeholder="...../...../20.."></label>
+            </div>
+            <div class="field-group signature-area">
+              <label>Signature du candidat</label>
+              <div class="signature-place">_________________________</div>
+            </div>
+          </div>
+
+          <!-- NOTE -->
+          <div class="form-section">
+            <p class="note">NB: Les noms et prénoms doivent être ceux figurant sur la carte d’identité nationale et le changement de spécialité au cours de l’année doit porter la mention de l’administration.<br><em>Your name and surname should appear the same as in your National Identity Card and any change of department (specialty) you have to inform the school authority</em></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- SECTION WALL OF SUCCESS -->
+    <div id="wallofsuccess-section" class="wallofsuccess-section hidden">
+      <div class="wallofsuccess-header">
+        <h2><i class="fas fa-trophy"></i> Wall of Success</h2>
+        <p>Valorisation de l’excellence académique à l’IUG</p>
+      </div>
+      <div class="wallofsuccess-nav">
+        <div class="level-tabs">
+          <button class="tab-btn active" data-level="bts1">BTS 1</button>
+          <button class="tab-btn" data-level="bts2">BTS 2</button>
+          <button class="tab-btn" data-level="hnd1">HND 1</button>
+          <button class="tab-btn" data-level="hnd2">HND 2</button>
+        </div>
+        <div class="school-filters">
+          <button class="school-filter active" data-school="all">Toutes écoles</button>
+          <button class="school-filter" data-school="esg">ESG</button>
+          <button class="school-filter" data-school="ista">ISTA</button>
+          <button class="school-filter" data-school="isa">ISA</button>
+        </div>
+      </div>
+      <div id="rankings-container" class="rankings-container">
+        <div class="loading-spinner"><i class="fas fa-spinner fa-pulse"></i> Chargement...</div>
+      </div>
+      <div class="wallofsuccess-footer">
+        <p class="note">Les classements sont basés sur les moyennes générales du semestre.</p>
+        <p class="info">🔒 Respect de la vie privée : seuls les étudiants ayant donné leur accord apparaissent.</p>
+      </div>
+    </div>
+
+    <footer id="main-footer">
+      <div class="footer-links">
+        <a href="#" id="aboutLink">À propos</a>
+        <a href="#" id="faqLink">FAQ / Aide</a>
+        <a href="#" id="contactLink">Contact</a>
+        <a href="#" id="accessibilityLink">Accessibilité</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="ecoles"><span>ESG</span> • <span>ISTA</span> • <span>ISA</span></div>
+      <p class="footer-institution">Institut Universitaire du Golfe de Guinée</p>
+      <p>© 2025 • Tous droits réservés</p>
+    </footer>
+  </div>
+
+  <!-- MODALE CONNEXION -->
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Connexion</h2>
+      <p>Connectez-vous avec votre compte ENT</p>
+      <input type="text" placeholder="Identifiant">
+      <input type="password" placeholder="Mot de passe">
+      <button id="loginSubmit">Se connecter</button>
+      <button id="loginClose">Fermer</button>
+    </div>
+  </div>
+
+  <!-- PANNEAU ACCESSIBILITÉ -->
+  <div id="accessibilityPanel" class="accessibility-panel hidden">
+    <h3>Accessibilité</h3>
+    <label>Taille de police : <select id="fontSize"><option value="normal">Normale</option><option value="large">Grande</option><option value="xlarge">Très grande</option></select></label>
+    <label>Contraste : <select id="contrast"><option value="normal">Normal</option><option value="high">Élevé</option></select></label>
+    <button id="closeAccessibility">Fermer</button>
+  </div>
+
+  <!-- POPUP SONDAGE -->
+  <div id="surveyPopup" class="survey-popup hidden">
+    <p>Quel outil utilisez-vous le plus ?</p>
+    <div class="survey-options">
+      <button data-tool="buseye">BusEye</button>
+      <button data-tool="annales">Annales</button>
+      <button data-tool="cerise">Cerise</button>
+      <button data-tool="orient">OrientIUG</button>
+    </div>
+    <button id="closeSurvey">Plus tard</button>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast-container" class="toast-container hidden"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
